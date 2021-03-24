@@ -30,3 +30,23 @@ plt.xlabel("petal length (zscore)")
 plt.ylabel("petal width (szcore")
 plt.legend(loc = "upper left")
 plt.show()
+
+## testing regulariation
+
+weights, params = [], []
+for c in range(-5, 5):
+    lr = LogisticRegression(C = 10 ** c, random_state=1,solver = "lbfgs", multi_class="ovr")
+    lr.fit(X_train_std, y_train)
+    weights.append(lr.coef_[1])
+    params.append(10 **c)
+
+weights = np.array(weights)
+plt.plot(params, weights[:, 1], linestyle = "--",
+         label = "petal width")
+plt.plot(params, weights[:, 0], label = "petal length")
+plt.ylabel("Weight coefficient")
+plt.xlabel("C in LogisticRegression")
+plt.legend(loc = "upper left")
+plt.xscale("log")
+plt.show()
+
