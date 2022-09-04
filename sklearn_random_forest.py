@@ -13,9 +13,9 @@ iris = datasets.load_iris()
 X = iris.data[:,[2,3]]
 y = iris.target
 
-X_norm = StandardScaler().fit_transform(X)
+#X_norm = StandardScaler().fit_transform(X)
 
-X_train, X_test, y_train, y_test = train_test_split(X_norm, y, test_size=0.3, random_state=1, stratify=y)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1, stratify=y)
 
 dt = DecisionTreeClassifier(criterion= "gini", random_state=1, max_depth= 3)
 rf = RandomForestClassifier(criterion="gini", n_estimators= 25, random_state=1, max_depth=3)
