@@ -20,6 +20,6 @@ svm.fit(X_train, y_train)
 y_hat = svm.predict(X_test)
 
 acc_score = accuracy_score(y_test, y_hat)
-f1_score = f1_score(y_test, y_hat, average = "weighted")
+f_score = f1_score(y_test, y_hat, average = "weighted")
 
-print("Accuracy score is {:.3f}, F1 score is {:.3f}".format(acc_score, f1_score)) ## better than perceptron, similar to logistic regression
+print("Accuracy score is {:.3f}, F1 score is {:.3f}".format(acc_score, f_score)) ## better than perceptron, similar to logistic regression

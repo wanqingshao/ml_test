@@ -21,6 +21,6 @@ knn.fit(X_train,  y_train)
 y_hat = knn.predict(X_test)
 
 acc_score = accuracy_score(y_test, y_hat)
-f1_score = f1_score(y_test, y_hat, average = "weighted")
+f_score = f1_score(y_test, y_hat, average = "weighted")
 
-print("Accuracy score is {:.3f}, F1 score is {:.3f}".format(acc_score, f1_score)) ##best performance with current setting
+print("Accuracy score is {:.3f}, F1 score is {:.3f}".format(acc_score, f_score)) ##best performance with current setting

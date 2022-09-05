@@ -17,9 +17,9 @@ percep.fit(X_train, y_train)
 y_pred = percep.predict(X_test)
 
 acc_score = accuracy_score(y_test, y_pred)
-f1_score = f1_score(y_test, y_pred, average = "weighted")
+f_score = f1_score(y_test, y_pred, average = "weighted")
 
-print("Accuracy score is {:.3f}, F1 score is {:.3f}".format(acc_score, f1_score))
+print("Accuracy score is {:.3f}, F1 score is {:.3f}".format(acc_score, f_score))
 
 
 
