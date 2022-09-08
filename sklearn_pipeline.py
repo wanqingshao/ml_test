@@ -134,7 +134,7 @@ param_grid = [{"svc__C": param_ranges,
                "svc__kernel": ['linear']},
               {"svc__C": param_ranges,
                "svc__gamma": param_ranges,
-               "svc__kernel": ['rbf']}]
+               "svc__kernel": ['rbf']}] ## dictionary value needs to be list
 
 gs = GridSearchCV(estimator= pipe_svc,
                   param_grid = param_grid,
